@@ -1,0 +1,278 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html,body{
+    font-family: "pretendard";
+}
+
+/* !------------------------------------------------S layout */
+#wrap{
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.sub-page{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+/*------------------ title */
+.sub-page h2{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.sub-page>p{
+    margin-top: 8px;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #777;
+}
+/* !----------------------------------------------S choice layout */
+.sub-page>ul{
+    margin-top: 50px;
+    width: 100%;
+    height: 362px;
+    display: flex;
+    gap: 20px;
+}
+.sub-page>ul li{
+    height: 100%;
+    flex: 1;
+    background-color: #aaa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sub-page>ul li>ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sub-page>ul li>ul>li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.sub-page>ul li>ul>li .container{
+    width: 100%;
+    height: 100%;
+}
+.sub-page>ul li>ul>li .container a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.container h3{
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+}
+/*-------------------------------- hover bounce ani */
+.trend-before a:hover h3{
+    animation : bounce 2s infinite alternate;
+}
+.custom-before a:hover h3{
+    animation : bounce 2s infinite alternate;
+}
+@keyframes bounce{
+    0%, 50%, 100% {
+    transform: translateY(0);
+    }
+    25% {
+    transform: translateY(-5px);
+    }
+    75% {
+    transform: translateY(-5px);
+    }
+}
+.container p{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffffb7;
+}
+.container button{
+    height: 25px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-60%);
+    font-size: 20px;
+    color: #ffffffee;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.container button h5{
+    font-weight: 400;
+}
+.container button:hover h5{
+    font-weight: 500;
+}
+
+/* !-------------------------------------- S trend style */
+.trend-x{
+    position: absolute;
+    bottom: 48px;
+    right: 190px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.trend-x.rotate-90 {
+transform: rotate(90deg);
+} 
+.trend-x.rotate-135 {
+cursor: pointer;
+transform: translate(170px, -270px) rotate(135deg);
+}
+
+.trend-before .container a{
+    background: linear-gradient(to top,#720000, #c10000);
+}
+
+.trend-after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to top,#720000, #c10000);
+}
+.trend-afterbox{
+    width: 420px;
+    height: auto;
+}
+.trend-afterbox h4{
+    font-weight: 400;
+    font-size: 16px;
+}
+.trend-needs{
+    margin-top: 15px;
+    line-height: 25px;
+}
+
+
+
+
+
+
+
+.graph-container {
+    display: flex;
+    padding: 15px 0;
+    width: 420px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+
+.circle {
+    position: relative;
+    width: 115px;
+    height: 115px;
+}
+
+.circle svg {
+    transform: rotate(-90deg);
+    overflow: visible; /* 그래프가 잘리지 않도록 설정 */
+    width: 115px;
+    height: 115px;
+}
+
+.circle circle {
+    fill: none;
+    stroke-width: 5;
+    stroke-linecap: round;
+
+}
+
+.circle .progress {
+    stroke: #ffffff;
+    stroke-dasharray: 314; /* 2 * Math.PI * radius (50px) */
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 2s ease;
+}
+
+.circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+    font-weight: 600;
+}
+.circle span p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+
+
+
+
+/* !------------------------------------S custom style */
+.custom-x{
+    position: absolute;
+    bottom: 48px;
+    right: 190px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.custom-x.rotate-90 {
+transform: rotate(90deg);
+} 
+.custom-x.rotate-135 {
+cursor: pointer;
+transform: translate(170px, -270px) rotate(135deg);
+}
+.custom-before .container a{
+    background: linear-gradient(to top,#000000, #3b3b3b);
+}
+
+.custom-after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to top,#000000, #3b3b3b);
+}
+.custom-afterbox{
+    width: 420px;
+    height: auto;
+}
+.custom-afterbox h4{
+    font-weight: 400;
+    font-size: 16px;
+}
+.custom-needs{
+    margin-top: 15px;
+    line-height: 25px;
+}
+
